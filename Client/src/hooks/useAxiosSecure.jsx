@@ -2,10 +2,9 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import { useEffect } from "react";
 import useAuth from "./useAuth";
-// import useAuth from "./useAuth";
 
 const axiosSecure = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: import.meta.env.VITE_API_URL || "https://local-chef-bazar-web-project.onrender.com",
 });
 
 const useAxiosSecure = () => {
